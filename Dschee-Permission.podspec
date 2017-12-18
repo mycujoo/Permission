@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "Dschee-Permission"
   s.module_name  = "Permission"
-  s.version      = "2.1.0"
+  s.version      = "2.1.1"
   s.license      = { :type => "MIT" }
   s.homepage     = "https://github.com/Dschee/Permission"
   s.author       = { "Damien" => "damien@delba.io" }
