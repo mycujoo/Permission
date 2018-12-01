@@ -104,20 +104,19 @@ open class Permission: NSObject {
     /// Variable used to retain the notifications permission.
     @available(iOS 10.0, *)
     fileprivate static var _userNotifications: Permission?
-    
+
     /// The permission to send notifications.
-    /// - note: This cannot be marked with `@available(iOS 10.0, *)`, because then it seems to
-    ///   conflict with the internal availability check for iOS 12 (compiler bug?). Exercise caution!
+    @available(iOS 10.0, *)
     open static let userNotifications: Permission = {
-        if #available(iOS 12.0, *) {
-            _userNotifications = Permission(type: .userNotifications([.provisional, .alert, .badge, .sound]))
-            return _userNotifications!
-        } else if #available(iOS 10.0, *) {
-            _userNotifications = Permission(type: .userNotifications([.alert, .badge, .sound]))
-            return _userNotifications!
-        } else {
-            fatalError()
-        }
+        _userNotifications = Permission(type: .userNotifications([.alert, .badge, .sound]))
+        return _userNotifications!
+    }()
+
+    /// The permission to send notifications.
+    @available(iOS 12.0, *)
+    open static let userNotificationsWithProvisional: Permission = {
+        _userNotifications = Permission(type: .userNotifications([.provisional, .alert, .badge, .sound]))
+        return _userNotifications!
     }()
     
     /// The permission to send notifications.
