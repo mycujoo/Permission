@@ -284,9 +284,9 @@ open class Permission: NSObject {
         
         switch status {
         case .authorized, .provisional:    callbacks(status)
-        case .notDetermined: presentPrePermissionAlert ? prePermissionAlert.present() : requestAuthorization(callbacks)
-        case .denied:        presentDeniedAlert ? deniedAlert.present() : callbacks(status)
-        case .disabled:      presentDisabledAlert ? disabledAlert.present() : callbacks(status)
+        case .notDetermined: requestAuthorization(callbacks)
+        case .denied:        callbacks(status)
+        case .disabled:      callbacks(status)
         }
     }
     
