@@ -35,6 +35,7 @@ internal extension Permission {
         case .authorized:          return .authorized
         case .restricted, .denied: return .denied
         case .notDetermined:       return .notDetermined
+        @unknown default: return .notDetermined
         }
     }
     
@@ -45,7 +46,7 @@ internal extension Permission {
             print("WARNING: \(String.mediaLibraryUsageDescription) not found in Info.plist")
             return
         }
-
+        
         MPMediaLibrary.requestAuthorization { _ in
             callback(self.statusMediaLibrary)
         }

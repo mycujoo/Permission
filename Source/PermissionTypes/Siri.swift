@@ -24,7 +24,7 @@
 
 #if PERMISSION_SIRI
 import Intents
-    
+
 internal extension Permission {
     var statusSiri: PermissionStatus {
         guard #available(iOS 10.0, *) else { fatalError() }
@@ -33,6 +33,7 @@ internal extension Permission {
         case .authorized:          return .authorized
         case .restricted, .denied: return .denied
         case .notDetermined:       return .notDetermined
+        @unknown default: return .notDetermined
         }
     }
     func requestSiri(_ callback: @escaping Callback) {

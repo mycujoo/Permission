@@ -33,6 +33,7 @@ internal extension Permission {
         case .authorized:          return .authorized
         case .denied, .restricted: return .denied
         case .notDetermined:       return .notDetermined
+        @unknown default: return .notDetermined
         }
     }
     
@@ -41,7 +42,7 @@ internal extension Permission {
             print("WARNING: \(String.photoLibraryUsageDescription) not found in Info.plist")
             return
         }
-
+        
         PHPhotoLibrary.requestAuthorization { _ in
             callback(self.statusPhotos)
         }
