@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "Dschee-Permission"
   s.module_name  = "Permission"
-  s.version      = "2.1.1"
+  s.version      = "3.0.0"
   s.license      = { :type => "MIT" }
   s.homepage     = "https://github.com/Dschee/Permission"
   s.author       = { "Damien" => "damien@delba.io" }
@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.default_subspec = 'Core'
+
+  s.swift_version = '5.0'
 
   s.subspec 'Core' do |co|
     co.source_files = "Source/**/*.{swift, h}"
