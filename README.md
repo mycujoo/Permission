@@ -1,11 +1,8 @@
-***This repository is a fork of the original project https://github.com/delba/Permission. It was created due to [this ](https://github.com/delba/Permission/pull/94) and [that](https://github.com/delba/Permission/pull/90) PR not getting merged or answered by @delba any more. To switch to this fork simply replace `pod 'Permission'` with `pod 'Dschee-Permission'` if you are using CocoaPods or `github "delba/Permission"` with `github "Dschee/Permission"` if your are using Carthage.***
-
 <p align="center">
   <img src="https://github.com/Dschee/Permission/raw/assets/Permission@2x.png">
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/Dschee/Permission"><img alt="Travis Status" src="https://img.shields.io/travis/Dschee/Permission.svg"/></a>
   <a href="https://img.shields.io/cocoapods/v/Permission.svg"><img alt="CocoaPods compatible" src="https://img.shields.io/cocoapods/v/Permission.svg"/></a>
   <a href="https://github.com/Carthage/Carthage"><img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"/></a>
 </p>
@@ -279,24 +276,8 @@ pod 'Permission/Notifications'
 
 Please see `Permission.podspec` for more information about which subspecs are available.
 
+***This repository is a fork of the original project https://github.com/delba/Permission.***
+
 ## License
 
-Copyright (c) 2015-2016 Damien (http://delba.io)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Permission is available under the MIT license. See the [LICENSE](https://github.com/mycujoo/Permission/blob/release/LICENSE) file for more info.
