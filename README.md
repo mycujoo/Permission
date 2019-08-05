@@ -218,7 +218,7 @@ $ brew install carthage
 To integrate Permission into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Dschee/Permission"
+github "MyCujoo/Permission"
 ```
 
 ##### Configuration
@@ -270,11 +270,11 @@ To integrate Permission into your Xcode project using CocoaPods, specify it in y
 ```ruby
 use_frameworks!
 
-pod 'Permission/Camera'
-pod 'Permission/Notifications'
+pod 'MyCujoo-Permission/Camera'
+pod 'MyCujoo-Permission/Notifications'
 ```
 
-Please see `Permission.podspec` for more information about which subspecs are available.
+Please see `MyCujoo-Permission.podspec` for more information about which subspecs are available.
 
 ***This repository is a fork of the original project https://github.com/delba/Permission.***
 
