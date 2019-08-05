@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/mycujoo/Permission/raw/assets/Permission@2x.png">
+  <img src="https://raw.githubusercontent.com/mycujoo/Permission/assets/Permission@2x.png">
 </p>
 
 <p align="center">
