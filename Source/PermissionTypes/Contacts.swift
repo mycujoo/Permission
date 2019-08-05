@@ -30,11 +30,12 @@ internal extension Permission {
         guard #available(iOS 9.0, *) else { fatalError() }
         
         let status = CNContactStore.authorizationStatus(for: .contacts)
-            
+        
         switch status {
         case .authorized:          return .authorized
         case .restricted, .denied: return .denied
         case .notDetermined:       return .notDetermined
+        @unknown default: return .notDetermined
         }
     }
     

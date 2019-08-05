@@ -25,7 +25,7 @@
 import UserNotifications
 #endif
 
-public enum PermissionType {
+public enum PermissionType: Equatable {
     #if PERMISSION_CONTACTS
     @available(iOS 9.0, *) case contacts
     #endif
@@ -152,5 +152,11 @@ extension PermissionType: CustomStringConvertible {
         #endif
         
         fatalError()
+    }
+}
+
+extension PermissionType: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(description)
     }
 }

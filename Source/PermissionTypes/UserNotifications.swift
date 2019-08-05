@@ -36,7 +36,7 @@ internal extension Permission {
         let semaphore = DispatchSemaphore(value: 0)
         
         var status: PermissionStatus = .notDetermined
-
+        
         UNUserNotificationCenter.current().getNotificationSettings { settings in
             switch settings.authorizationStatus {
             case .authorized:
@@ -44,6 +44,10 @@ internal extension Permission {
             case .denied:
                 status = .denied
             case .notDetermined:
+                status = .notDetermined
+            case .provisional:
+                status = .provisional
+            @unknown default:
                 status = .notDetermined
             }
             semaphore.signal()

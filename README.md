@@ -1,9 +1,8 @@
 <p align="center">
-  <img src="https://github.com/delba/Permission/raw/assets/Permission@2x.png">
+  <img src="https://github.com/Dschee/Permission/raw/assets/Permission@2x.png">
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/delba/Permission"><img alt="Travis Status" src="https://img.shields.io/travis/delba/Permission.svg"/></a>
   <a href="https://img.shields.io/cocoapods/v/Permission.svg"><img alt="CocoaPods compatible" src="https://img.shields.io/cocoapods/v/Permission.svg"/></a>
   <a href="https://github.com/Carthage/Carthage"><img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"/></a>
 </p>
@@ -18,8 +17,8 @@
 
 #### Permission
 
-> [`Permission.swift`](https://github.com/delba/Permission/blob/master/Source/Permission.swift)
-> [`PermissionStatus.swift`](https://github.com/delba/Permission/blob/master/Source/PermissionStatus.swift)
+> [`Permission.swift`](https://github.com/Dschee/Permission/blob/release/Source/Permission.swift)
+> [`PermissionStatus.swift`](https://github.com/Dschee/Permission/blob/release/Source/PermissionStatus.swift)
 
 ```swift
 let permission: Permission = .contacts
@@ -38,28 +37,28 @@ permission.request { status in
 
 ##### Supported Permissions
 
-> [`PermissionType.swift`](https://github.com/delba/Permission/blob/master/Source/PermissionType.swift)
-> [`PermissionTypes/`](https://github.com/delba/Permission/tree/master/Source/PermissionTypes)
+> [`PermissionType.swift`](https://github.com/Dschee/Permission/blob/release/Source/PermissionType.swift)
+> [`PermissionTypes/`](https://github.com/Dschee/Permission/tree/release/Source/PermissionTypes)
 
-- [`AddressBook`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/AddressBook.swift) (Deprecated in iOS 9.0)
-- [`Bluetooth`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Bluetooth.swift)
-- [`Camera`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Camera.swift)
-- [`Contacts`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Contacts.swift)
-- [`Events`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Events.swift)
-- [`Motion`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Motion.swift)
-- [`Microphone`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Microphone.swift)
-- [`Notifications`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Notifications.swift)
-- [`Photos`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Photos.swift)
-- [`Reminders`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Reminders.swift)
-- [`LocationAlways`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/LocationAlways.swift)
-- [`LocationWhenInUse`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/LocationWhenInUse.swift)
-- [`MediaLibrary`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/MediaLibrary.swift)
-- [`SpeechRecognizer`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/SpeechRecognizer.swift)
-- [`Siri`](https://github.com/delba/Permission/blob/master/Source/PermissionTypes/Siri.swift)
+- [`AddressBook`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/AddressBook.swift) (Deprecated in iOS 9.0)
+- [`Bluetooth`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Bluetooth.swift)
+- [`Camera`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Camera.swift)
+- [`Contacts`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Contacts.swift)
+- [`Events`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Events.swift)
+- [`Motion`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Motion.swift)
+- [`Microphone`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Microphone.swift)
+- [`Notifications`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Notifications.swift)
+- [`Photos`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Photos.swift)
+- [`Reminders`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Reminders.swift)
+- [`LocationAlways`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/LocationAlways.swift)
+- [`LocationWhenInUse`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/LocationWhenInUse.swift)
+- [`MediaLibrary`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/MediaLibrary.swift)
+- [`SpeechRecognizer`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/SpeechRecognizer.swift)
+- [`Siri`](https://github.com/Dschee/Permission/blob/release/Source/PermissionTypes/Siri.swift)
 
 #### PermissionAlert
 
-> [`PermissionAlert.swift`](https://github.com/delba/Permission/blob/master/Source/PermissionAlert.swift)
+> [`PermissionAlert.swift`](https://github.com/Dschee/Permission/blob/release/Source/PermissionAlert.swift)
 
 ##### Denied and disabled alerts
 
@@ -97,7 +96,7 @@ The system alert will only be presented if the user taps "Give Access".
 
 #### PermissionSet
 
-> [`PermissionSet.swift`](https://github.com/delba/Permission/blob/master/Source/PermissionSet.swift)
+> [`PermissionSet.swift`](https://github.com/Dschee/Permission/blob/release/Source/PermissionSet.swift)
 
 Use a `PermissionSet` to check the status of a group of `Permission` and to react when a permission is requested.
 
@@ -125,7 +124,7 @@ func permissionSet(permissionSet: PermissionSet, didRequestPermission permission
 
 #### PermissionButton
 
-> [`PermissionButton`](https://github.com/delba/Permission/blob/master/Source/PermissionButton.swift)
+> [`PermissionButton`](https://github.com/Dschee/Permission/blob/release/Source/PermissionButton.swift)
 
 A `PermissionButton` requests the permission when tapped and updates itself when its underlying permission status changes.
 
@@ -201,7 +200,7 @@ class PermissionsViewController: UIViewController, PermissionSetDelegate {
 }
 ```
 
-<img align="center" src="https://raw.githubusercontent.com/delba/Permission/assets/permission.gif" />
+<img align="center" src="https://raw.githubusercontent.com/Dschee/Permission/assets/permission.gif" />
 
 ## Installation
 
@@ -219,7 +218,7 @@ $ brew install carthage
 To integrate Permission into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "delba/Permission"
+github "MyCujoo/Permission"
 ```
 
 ##### Configuration
@@ -271,30 +270,14 @@ To integrate Permission into your Xcode project using CocoaPods, specify it in y
 ```ruby
 use_frameworks!
 
-pod 'Permission/Camera'
-pod 'Permission/Notifications'
+pod 'MyCujoo-Permission/Camera'
+pod 'MyCujoo-Permission/Notifications'
 ```
 
-Please see `Permission.podspec` for more information about which subspecs are available.
+Please see `MyCujoo-Permission.podspec` for more information about which subspecs are available.
+
+***This repository is a fork of the original project https://github.com/delba/Permission.***
 
 ## License
 
-Copyright (c) 2015-2016 Damien (http://delba.io)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Permission is available under the MIT license. See the [LICENSE](https://github.com/mycujoo/Permission/blob/release/LICENSE) file for more info.
