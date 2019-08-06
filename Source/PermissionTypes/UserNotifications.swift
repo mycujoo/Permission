@@ -19,7 +19,7 @@ internal extension Permission {
     func requestUserNotifications(_ callback: @escaping Callback) {
         guard #available(iOS 10.0, *) else { fatalError() }
         guard case .userNotifications(let settings) = type else { fatalError() }
-        
+
         var status: PermissionStatus = .notDetermined
         UNUserNotificationCenter.current().requestAuthorization(options: settings) { (isGranted, error) in
             if error != nil {

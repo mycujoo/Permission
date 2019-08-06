@@ -48,7 +48,7 @@ extension Permission {
         case .poweredOn: return .authorized
         case .resetting, .unknown:
             return UserDefaults.standard.statusBluetooth ?? .notDetermined
-        @unknown default: return .notDetermined
+        @unknown default: fatalError()
         }
     }
     

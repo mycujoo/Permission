@@ -37,7 +37,7 @@ internal extension Permission {
             return UserDefaults.standard.requestedLocationAlwaysWithWhenInUse ? .denied : .notDetermined
         case .notDetermined: return .notDetermined
         case .restricted, .denied: return .denied
-        @unknown default: return .notDetermined
+        @unknown default: fatalError()
         }
     }
     

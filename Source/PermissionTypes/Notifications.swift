@@ -23,23 +23,12 @@
 //
 
 #if PERMISSION_NOTIFICATIONS
-import ObjectiveC
-private var timerKey: UInt8 = 0
-    
 internal extension Permission {
-    private var timer: Timer? {
-        get {
-            return objc_getAssociatedObject(self, &timerKey) as? Timer
-        }
-        set(newValue) {
-            objc_setAssociatedObject(self, &timerKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
-        }
-    }
-    
     var statusNotifications: PermissionStatus {
-        if let settings = UIApplication.shared.currentUserNotificationSettings, settings.types.isEmpty == false {
+        if UIApplication.shared.currentUserNotificationSettings?.types.isEmpty == false {
             return .authorized
         }
+        
         return UserDefaults.standard.requestedNotifications ? .denied : .notDetermined
     }
     
@@ -47,21 +36,16 @@ internal extension Permission {
         guard case .notifications(let settings) = type else { fatalError() }
         
         NotificationCenter.default.addObserver(self, selector: #selector(requestingNotifications), name: UIApplication.willResignActiveNotification)
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(finishedRequestingNotifications), userInfo: nil, repeats: false)
         
         UIApplication.shared.registerUserNotificationSettings(settings)
     }
     
-    @objc private dynamic func requestingNotifications() {
-        timer?.invalidate()
-        
+    @objc func requestingNotifications() {
         NotificationCenter.default.removeObserver(self, name: UIApplication.willResignActiveNotification)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(finishedRequestingNotifications),
-                                               name: UIApplication.didBecomeActiveNotification)
+        NotificationCenter.default.addObserver(self, selector: #selector(finishedRequestingNotifications), name: UIApplication.didBecomeActiveNotification)
     }
     
-    @objc private dynamic func finishedRequestingNotifications() {
+    @objc func finishedRequestingNotifications() {
         NotificationCenter.default.removeObserver(self, name: UIApplication.willResignActiveNotification)
         NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification)
         
