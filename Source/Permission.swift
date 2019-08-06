@@ -265,7 +265,7 @@ open class Permission: NSObject {
 
      - returns: A newly created permission.
      */
-    fileprivate init(type: PermissionType) {
+    public init(type: PermissionType) {
         self.type = type
     }
 

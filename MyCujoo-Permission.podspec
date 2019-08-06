@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "MyCujoo-Permission"
   s.module_name  = "Permission"
-  s.version      = "3.0.2"
+  s.version      = "3.0.3"
   s.license      = { :type => "MIT" }
   s.homepage     = "https://github.com/mycujoo/Permission"
   s.author       = { "Damien" => "damien@delba.io" }
